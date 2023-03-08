@@ -24,4 +24,12 @@ Create a new workspace as follows:
 Follow the instructions to fill in the variables for the workspace and click Save variables.
 
 ## Start a Run
-Click the Start a new plan button to start the first run. The run will be done in two phases: plan and apply. After plan completes successfully, it will show the list of resources that apply will create. Click Confirm and Apply to start the apply phase.
+Click the Start a new plan button to start the first run. 
+The run will be done in two phases: plan and apply. 
+After plan completes successfully, it will show the list of resources that apply will create. 
+Click Confirm and Apply to start the apply phase.
+
+## Auth0 Email Connection Id
+The workspace has an output named "auth0_email_connection_id".
+You can see it on the Outputs tab of the workspace.
+You may need this value to configure specific app deployments.
