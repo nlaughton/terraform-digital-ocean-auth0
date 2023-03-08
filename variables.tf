@@ -4,7 +4,7 @@ variable "digital_ocean_token" {
 }
 
 variable domain {
-  description = "Top level domain that will be related to this cluster (example.com)."
+  description = "Top level domain that will be related to this cluster (my-app.com for example)."
   type = string
 }
 
@@ -24,7 +24,7 @@ variable auth0_client_secret {
 }
 
 variable auth0_default_email {
-  description = "The default from email address that will be used with Auth0."
+  description = "The default from email address that will be used with Auth0 (enter your email)."
   type = string
 }
 
