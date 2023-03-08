@@ -7,11 +7,11 @@ resource "digitalocean_record" "auth0_custom_domain_record" {
 }
 
 resource "digitalocean_record" "send_grid_record" {
-  for_each = { for index, record in sendgrid_domain_authentication.default.dns : index => record }
+  count  = 3
   domain = var.domain
-  type   = upper(each.value.type)
-  name   = split(".${var.domain}",each.value.host)[0]
-  value  = each.value.data
-  priority = each.value.type == "mx" ? 10 : null
+  type   = upper(sendgrid_domain_authentication.default.dns[count.index].type)
+  name   = split(".${var.domain}",sendgrid_domain_authentication.default.dns[count.index].host)[0]
+  value  = sendgrid_domain_authentication.default.dns[count.index].data
+  priority = sendgrid_domain_authentication.default.dns[count.index].type == "mx" ? 10 : null
   depends_on = [sendgrid_domain_authentication.default]
 }

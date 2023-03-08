@@ -9,7 +9,7 @@ variable domain {
 }
 
 variable auth0_domain {
-  description = "Your Auth0 domain name."
+  description = "Your Auth0 tenant's domain name (my-app.us.auth0.com for example)."
   type = string
 }
 
@@ -31,4 +31,5 @@ variable auth0_default_email {
 variable sendgrid_api_key {
   description = "The SendGrid api key that will be used by Auth0."
   type = string
+  sensitive = true
 }
