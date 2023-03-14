@@ -1,7 +1,7 @@
 # Terraform DigitalOcean Auth0 Configuration
 This repository contains a set of Terraform files that configure Auth0 for a DigitalOcean environment [set up with the instructions here](https://github.com/apexdesigner/terraform-digital-ocean-cluster).
 ## Set up an Auth0 Tenant
-Set up an Auth0 tenant.
+Set up an Auth0 tenant with your app name as the tenant name (my-app for example).
 Subscribe to the B2C Essentials plan ($23 per month at the time of this writing) so that you can use a custom domain.
 Create a machine to machine application named Terraform and give it access to the Auth0 Management API (all permissions).
 
